@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 
-    <!--    ViewModel 데이터를 받겠다. -->
     <data>
+        <!--    <data> 태그 안에 <variable>로 activity라는 이름의 변수를 설정해 주었다. type은 해당 경로를 나타낸다.-->
+        <!--    ViewModel 데이터를 받아야 한다. -->
         <variable
             name="viewModel"
-            type="com.example.todomvvmbymyself.MainViewModel"/>
+            type="com.example.todomvvmbymyself.viewmodel.MainViewModel"/>
     </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
 
         <Button
