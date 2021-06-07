@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.todomvvmbymyself.databinding.ActivityMainBinding
 import com.example.todomvvmbymyself.viewmodel.MainViewModel
@@ -20,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         // 라이브 데이터 때문에 하는 것. = live data 의 라이프사이클 인식을 위해서
         binding.lifecycleOwner = this
-        // binding.activity = this@MainActivity // 버튼 클릭 이벤트
 
         // 뷰모델 선언 - AndroidViewModel 사용 할 경우 viewmodel 객체 설정
         val mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
